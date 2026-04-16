@@ -1,9 +1,10 @@
 <mvc:View
   controllerName="northcode.fioriyapsterdemo.controller.Main"
+  displayBlock="true"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
   xmlns:core="sap.ui.core">
-  <Page id="mainPage" title="Yapster" class="sapUiResponsiveContentPadding">
+  <Page id="mainPage" title="Yapster" class="feedPage sapUiResponsiveContentPadding">
     <subHeader>
       <Toolbar>
         <Title text="Fiori demo feed powered by mock OData" level="H3" />
@@ -12,7 +13,7 @@
       </Toolbar>
     </subHeader>
     <content>
-      <VBox class="sapUiMediumMarginTop sapUiMediumMarginBottom">
+      <VBox class="feedContent sapUiMediumMarginTop sapUiMediumMarginBottom">
         <SegmentedButton selectedKey="{view>/selectedCategory}" selectionChange=".onCategoryChange" class="sapUiSmallMarginBottom">
           <items>
             <SegmentedButtonItem key="All" text="All" />
