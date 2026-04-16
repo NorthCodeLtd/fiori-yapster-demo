@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+.ui5/
+.DS_Store
+playwright-report/
+package-lock.json.bak

@@ -1,0 +1,82 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "northcode.fioriyapsterdemo",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.1.0"
+    },
+    "title": "Yapster Fiori Demo",
+    "description": "Read-only Yapster-inspired feed built with SAPUI5 and mock OData.",
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/yapster/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://feed"
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "northcode.fioriyapsterdemo.view.Main",
+      "type": "XML",
+      "async": true,
+      "id": "mainView"
+    },
+    "dependencies": {
+      "minUI5Version": "1.147.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "models": {
+      "view": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "data": {
+            "selectedCategory": "All"
+          }
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "freestyle"
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "northcode-fiori-yapster-demo"
+  },
+  "sap.platform.hcp": {
+    "uri": "webapp"
+  }
+}

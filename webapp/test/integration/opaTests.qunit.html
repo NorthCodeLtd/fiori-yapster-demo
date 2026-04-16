@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OPA Tests</title>
+    <script
+      id="sap-ui-bootstrap"
+      src="/resources/sap-ui-core.js"
+      data-sap-ui-async="true"
+      data-sap-ui-language="en"
+      data-sap-ui-theme="sap_fiori_3"
+      data-sap-ui-resource-roots='{
+        "northcode.fioriyapsterdemo": "../../"
+      }'
+      data-sap-ui-on-init="module:sap/ui/test/opaQunit"
+      data-sap-ui-compat-version="edge"
+    ></script>
+    <script src="/resources/sap/ui/thirdparty/qunit.js"></script>
+    <script src="/resources/sap/ui/qunit/qunit-junit.js"></script>
+    <link rel="stylesheet" href="/resources/sap/ui/thirdparty/qunit-2.css">
+    <script>
+      sap.ui.getCore().attachInit(function () {
+        sap.ui.require(["northcode/fioriyapsterdemo/test/integration/AllJourneys"]);
+      });
+    </script>
+  </head>
+  <body class="sapUiBody">
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+  </body>
+</html>

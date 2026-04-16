@@ -1,0 +1,9 @@
+[
+  {
+    "urlPath": "/odata/v4/yapster/",
+    "name": "",
+    "metadataPath": "./metadata.xml",
+    "mockdataPath": "./data",
+    "generateMockData": false
+  }
+]

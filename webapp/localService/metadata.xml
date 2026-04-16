@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+  xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="YapsterService"
+      xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityType Name="Post">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="36" />
+        <Property Name="AuthorName" Type="Edm.String" Nullable="false" MaxLength="80" />
+        <Property Name="Handle" Type="Edm.String" Nullable="false" MaxLength="80" />
+        <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="1000" />
+        <Property Name="CreatedAt" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" />
+        <Property Name="Category" Type="Edm.String" Nullable="false" MaxLength="40" />
+        <Property Name="Priority" Type="Edm.String" Nullable="false" MaxLength="20" />
+      </EntityType>
+
+      <EntityContainer Name="Container">
+        <EntitySet Name="Posts" EntityType="YapsterService.Post" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

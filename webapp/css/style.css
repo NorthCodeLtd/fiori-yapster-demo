@@ -1,0 +1,12 @@
+.feedCard {
+  background: var(--sapTile_Background);
+  border-radius: 1rem;
+  border: 1px solid var(--sapList_BorderColor);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--sapContent_Shadow0);
+}
+
+.feedMessage {
+  font-size: 1.05rem;
+  line-height: 1.45;
+}

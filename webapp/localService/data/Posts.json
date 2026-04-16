@@ -1,0 +1,38 @@
+[
+  {
+    "ID": "post-1001",
+    "AuthorName": "Nordic Ops",
+    "Handle": "@nordic-ops",
+    "Message": "Training environment for the AI-aided software development workshop is now open. Laptop checks start at 08:30.",
+    "CreatedAt": "2026-04-15T06:20:00Z",
+    "Category": "Announcements",
+    "Priority": "High"
+  },
+  {
+    "ID": "post-1002",
+    "AuthorName": "Platform Team",
+    "Handle": "@platform-team",
+    "Message": "We shipped a new provisioning flow for ephemeral demo environments. Average startup time is now below four minutes.",
+    "CreatedAt": "2026-04-15T09:40:00Z",
+    "Category": "Engineering",
+    "Priority": "Medium"
+  },
+  {
+    "ID": "post-1003",
+    "AuthorName": "Training Crew",
+    "Handle": "@training-crew",
+    "Message": "Tomorrow's session focuses on turning refined user stories into approved mocks before implementation begins.",
+    "CreatedAt": "2026-04-14T14:15:00Z",
+    "Category": "Events",
+    "Priority": "Low"
+  },
+  {
+    "ID": "post-1004",
+    "AuthorName": "Niklas",
+    "Handle": "@niklas",
+    "Message": "Story mode demo deck is ready. Next step is a Fiori-based example application with real mock OData requests.",
+    "CreatedAt": "2026-04-16T08:12:00Z",
+    "Category": "Engineering",
+    "Priority": "High"
+  }
+]

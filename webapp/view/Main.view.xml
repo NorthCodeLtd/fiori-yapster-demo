@@ -1,0 +1,58 @@
+<mvc:View
+  controllerName="northcode.fioriyapsterdemo.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <Page id="mainPage" title="Yapster" class="sapUiResponsiveContentPadding">
+    <subHeader>
+      <Toolbar>
+        <Title text="Fiori demo feed powered by mock OData" level="H3" />
+        <ToolbarSpacer />
+        <ObjectStatus text="Read-only demo" state="Information" />
+      </Toolbar>
+    </subHeader>
+    <content>
+      <VBox class="sapUiMediumMarginTop sapUiMediumMarginBottom">
+        <SegmentedButton selectedKey="{view>/selectedCategory}" selectionChange=".onCategoryChange" class="sapUiSmallMarginBottom">
+          <items>
+            <SegmentedButtonItem key="All" text="All" />
+            <SegmentedButtonItem key="Engineering" text="Engineering" />
+            <SegmentedButtonItem key="Announcements" text="Announcements" />
+            <SegmentedButtonItem key="Events" text="Events" />
+          </items>
+        </SegmentedButton>
+
+        <MessageStrip
+          text="This demo starts as a read-only Fiori feed. Posting exists in the OData service but is intentionally not exposed in the UI yet."
+          type="Information"
+          showIcon="true"
+          class="sapUiSmallMarginBottom" />
+
+        <List
+          id="feedList"
+          growing="true"
+          growingScrollToLoad="true"
+          mode="None"
+          noDataText="No posts match this category"
+          items="{
+            path: '/Posts',
+            sorter: { path: 'CreatedAt', descending: true }
+          }">
+          <CustomListItem type="Inactive">
+            <VBox class="feedCard sapUiSmallMarginBottom">
+              <HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiTinyMarginBottom">
+                <ObjectIdentifier title="{AuthorName}" text="{Handle}" />
+                <ObjectStatus text="{Category}" state="Information" />
+              </HBox>
+              <Text text="{Message}" wrapping="true" class="feedMessage" />
+              <HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginTop">
+                <Text text="{ path: 'CreatedAt', formatter: '.formatDateTime' }" />
+                <ObjectStatus text="{Priority}" state="{ path: 'Priority', formatter: '.formatPriorityState' }" />
+              </HBox>
+            </VBox>
+          </CustomListItem>
+        </List>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>
