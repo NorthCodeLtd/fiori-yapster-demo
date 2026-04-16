@@ -8,7 +8,9 @@
     "start:plain": "ui5 serve -o index.html",
     "build": "ui5 build --clean-dest",
     "test:opa": "karma start",
-    "test": "npm run test:opa -- --single-run"
+    "test": "npm run test:opa -- --single-run",
+    "dev:setup": "./scripts/dev-setup.sh",
+    "mock:preview": "ui5 serve --config ui5-mock.yaml -o index.html --port 8081"
   },
   "devDependencies": {
     "@sap-ux/ui5-middleware-fe-mockserver": "2.4.11",
